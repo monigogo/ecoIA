@@ -1,0 +1,94 @@
+1. Propósito Estratégico del Módulo
+La verdadera potencia de un sistema fotovoltaico no reside en su rendimiento inicial, sino en su capacidad de sostener producción útil durante décadas. SolarLife AI incorpora un modelo de degradación energético‑financiero, diseñado para:
+    • Predecir producción futura con rigor técnico.
+    • Evaluar la rentabilidad real a largo plazo.
+    • Determinar el momento óptimo de repowering.
+    • Comparar escenarios bajo incertidumbre climática y tecnológica.
+Este módulo transforma una instalación solar en un activo energético proyectado hasta 2050, con una visión clara de su evolución y valor.
+2. Escenarios de Degradación Fotovoltaica (Modelo Triestocástico)
+SolarLife AI utiliza tres perfiles de degradación reconocidos por la industria, permitiendo al usuario comprender la incertidumbre real del sistema.
+🟩 Escenario Optimista — 0,3% anual
+    • Paneles N‑Type, HJT, TOPCon.
+    • Baja temperatura de operación.
+    • Mantenimiento preventivo regular.
+    • Instalaciones premium.
+🟨 Escenario Medio — 0,5% anual
+    • Estándar global para paneles monocristalinos P‑Type.
+    • Condiciones típicas de España.
+    • Representa el comportamiento más probable.
+🟥 Escenario Conservador — 0,8% anual
+    • Zonas de alta temperatura.
+    • Ambientes costeros con salinidad.
+    • Paneles de gama de entrada o instalación subóptima.
+Por qué tres escenarios: Una única predicción induce a error. Tres curvas permiten visualizar riesgo, incertidumbre y resiliencia del sistema.
+3. Algoritmo de Producción Futura
+SolarLife AI utiliza un modelo de decaimiento compuesto, idéntico al empleado en ingeniería solar y análisis financiero (LCOE, CAPEX/OPEX).
+En=E1×(1−d)(n−1)
+Donde:
+    • E₁ = producción del primer año (PVGIS/PVWatts/pvlib).
+    • d = tasa de degradación (0.003, 0.005, 0.008).
+    • n = año proyectado (1–30).
+Este modelo garantiza coherencia entre:
+    • Datos oficiales de radiación.
+    • Degradación certificada por fabricantes.
+    • Proyecciones financieras de largo plazo.
+4. Criterio de Vida Útil (Umbral de Rendimiento)
+SolarLife AI redefine la vida útil desde un enfoque económico‑energético, no físico.
+🔵 Vida Útil Productiva
+Primer año en el que la producción cae por debajo del 80% de la producción inicial.
+Justificación técnica
+    • Coincide con garantías de fabricantes (25–30 años ≥80–87%).
+    • Marca el punto donde el coste de oportunidad supera el beneficio energético.
+    • Señala el momento óptimo para repowering o ampliación.
+Justificación para el usuario
+“Tu sistema sigue funcionando, pero ya no produce lo suficiente para tus necesidades futuras.”
+5. Entregables del Sistema
+SolarLife AI genera un Informe de Salud Energética con:
+📌 Producción clave
+    • Año 1
+    • Año 10
+    • Año 20
+    • Año 25
+    • Año 30
+📌 Energía acumulada
+Sumatorio total de kWh generados durante 30 años.
+📌 Vida útil productiva
+Año en que cae <80%.
+📌 Análisis de cobertura
+Comparación entre:
+    • Producción degradada
+    • Consumo actual del usuario
+Permite predecir cuándo el sistema dejará de ser autosuficiente.
+6. Capa de Visualización (Elemento crítico para jueces)
+La visualización es el argumento definitivo. Debe mostrar:
+Curva de Degradación Comparada (Optimista / Medio / Conservador)
+    • Tres líneas descendentes.
+    • El umbral del 80% como línea horizontal.
+    • El escenario conservador cruzando antes el umbral.
+    • El optimista manteniéndose por encima durante más años.
+¿Por qué es tan poderosa esta gráfica?
+Porque en 3 segundos el juez entiende:
+    • La incertidumbre real.
+    • La necesidad del modelo.
+    • La diferencia entre paneles premium y estándar.
+    • El valor de SolarLife AI como herramienta de planificación.
+Sin esta gráfica, el módulo se entiende. Con esta gráfica, se siente.
+7. Integración con la Arquitectura SolarLife AI
+🟦 Capa Conversacional (LLM)
+    • Explica degradación en lenguaje natural.
+    • Solicita datos faltantes.
+    • Presenta escenarios comparados.
+🟩 Capa Científica (PVGIS/PVWatts/pvlib)
+    • Obtiene E₁.
+    • Ejecuta el modelo de degradación.
+    • Calcula vida útil y energía acumulada.
+🟧 Capa Orquestadora
+    • Aplica el algoritmo.
+    • Devuelve JSON estructurado.
+🟫 Capa de Visualización
+    • Curva de degradación comparada.
+    • Línea del 80%.
+    • Escenarios superpuestos.
+    • Punto exacto de vida útil.
+8. Versión ultra‑sintética para jueces (30 segundos)
+“SolarLife AI proyecta la producción solar durante 30 años usando tres escenarios de degradación realistas. Calcula cuándo la instalación cae por debajo del 80% de su rendimiento inicial, que es el estándar de vida útil productiva. Esto permite al usuario saber no solo cuánto produce hoy, sino cuánta energía tendrá disponible en 2050. Es un modelo científico, transparente y verificable.”
