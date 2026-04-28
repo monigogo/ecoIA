@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Sparkles, MapPin, Zap, Battery, Calendar, Home } from 'lucide-react';
+import SolarBotAvatar from './SolarBotAvatar';
 import { calculateSolar, parseUserInput, getRegion, getProductionFactor } from '../utils/solarCalculations';
 
 export function Chatbot({ onCalculationComplete }) {
@@ -150,8 +151,8 @@ ${result.recommendation}
     <div className="flex flex-col h-full bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-solar-yellow to-solar-yellow-light p-4 flex items-center gap-3">
-        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
-          <Bot className="w-6 h-6 text-solar-yellow-dark" />
+        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md overflow-hidden">
+          <SolarBotAvatar size={36} className="w-9 h-9" />
         </div>
         <div>
           <h3 className="font-bold text-dark">SolarLife AI Assistant</h3>
@@ -175,10 +176,10 @@ ${result.recommendation}
                 message.type === 'bot'
                   ? 'bg-solar-yellow/20'
                   : 'bg-eco-green/20'
-              }`}
+              } overflow-hidden`}
             >
               {message.type === 'bot' ? (
-                <Bot className="w-4 h-4 text-solar-yellow-dark" />
+                <SolarBotAvatar size={28} className="w-7 h-7" />
               ) : (
                 <User className="w-4 h-4 text-eco-green-dark" />
               )}
@@ -197,8 +198,8 @@ ${result.recommendation}
         
         {isTyping && (
           <div className="flex gap-3">
-            <div className="w-8 h-8 rounded-full bg-solar-yellow/20 flex items-center justify-center">
-              <Bot className="w-4 h-4 text-solar-yellow-dark" />
+            <div className="w-8 h-8 rounded-full bg-solar-yellow/20 flex items-center justify-center overflow-hidden">
+              <SolarBotAvatar size={28} className="w-7 h-7" />
             </div>
             <div className="bg-white shadow-sm border border-gray-100 p-4 rounded-2xl">
               <div className="flex gap-1">
