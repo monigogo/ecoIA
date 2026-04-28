@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Instalar dependencias
+        working-directory: backend
+        run: uv sync
+
+
+      - name: Lint
+        working-directory: backend
+        run: uv run ruff check .
+
+      - name: Tests
+        working-directory: backend
+        run: uv run pytest
+        env:
+          ENVIRONMENT:              test
+          GROQ_API_KEY:             fake-groq-key
+          GENIUS_ACCESS_TOKEN:      fake-genius-token
+          MUSICBRAINZ_EMAIL:        test@example.com
+          SUPABASE_URL:             http://fake-url-for-tests.com
+          SUPABASE_KEY:             fake-key-for-tests
+          SPOTIPY_CLIENT_ID:        fake-client-id
+          SPOTIPY_CLIENT_SECRET:    fake-client-secret
+          YOUTUBE_API_KEY:          fake-youtube-key
+          LANGCHAIN_TRACING_V2:     "false"
+          OPEN_ROUTER_KEY:          ${{ secrets.OPEN_ROUTER_KEY }}
+          OPEN_ROUTER_URL:          ${{ secrets.OPEN_ROUTER_URL }}
+          OPEN_ROUTER_MODEL:        ${{ secrets.OPEN_ROUTER_MODEL }}
+
+      - name: Build Docker Image (Dry Run)
+        working-directory: ./backend
+        run: docker build -t test-backend .
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Instalar dependencias
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: Lint
+        working-directory: ./frontend
+        run: npm run lint
+
+      - name: Build
+        working-directory: ./frontend
+        run: npm run build
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}   
+      
+      - name: Build Docker Image (Dry Run)
+        working-directory: ./frontend
+        run: docker build -t test-frontend .
