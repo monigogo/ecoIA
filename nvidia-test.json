@@ -1,0 +1,15 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "detailed thinking off. Eres un agente conversacional útil, claro y directo. Usa herramientas cuando estén disponibles y sean necesarias."
+    },
+    {
+      "role": "user",
+      "content": "Hola, responde en una frase."
+    }
+  ],
+  "temperature": 0.2,
+  "stream": false
+}

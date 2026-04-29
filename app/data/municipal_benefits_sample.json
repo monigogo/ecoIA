@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "source_disclaimer": "Curated municipal tax benefits sample. Each entry must be verified against the official municipal ordinance before use.",
+  "benefits": [
+    {
+      "municipality": "Madrid",
+      "province": "Madrid",
+      "benefit_type": "ibi",
+      "title": "Bonificación IBI por instalación de sistemas de aprovechamiento térmico o eléctrico de la energía solar",
+      "description": "Bonificación municipal sobre la cuota íntegra del IBI para inmuebles con instalaciones para el aprovechamiento térmico o eléctrico de la energía solar. Sujeta a porcentaje y plazos definidos por la ordenanza fiscal anual.",
+      "source_name": "Ordenanza Fiscal IBI - Ayuntamiento de Madrid",
+      "source_url": "https://sede.madrid.es/",
+      "validity_status": "unknown",
+      "applies_to_project_types": ["residential", "smb"],
+      "applies_to_installation_types": ["new", "refurbishment", "extension"]
+    },
+    {
+      "municipality": "Barcelona",
+      "province": "Barcelona",
+      "benefit_type": "ibi",
+      "title": "Bonificació IBI per instal·lacions d'aprofitament d'energia solar",
+      "description": "Bonificación sobre la cuota íntegra del IBI durante un número de ejercicios fiscales para inmuebles con instalaciones de aprovechamiento de energía solar térmica o fotovoltaica.",
+      "source_name": "Ordenança fiscal IBI - Ajuntament de Barcelona",
+      "source_url": "https://ajuntament.barcelona.cat/hisenda/",
+      "validity_status": "unknown",
+      "applies_to_project_types": ["residential", "smb"],
+      "applies_to_installation_types": ["new", "refurbishment"]
+    },
+    {
+      "municipality": "Madrid",
+      "province": "Madrid",
+      "benefit_type": "icio",
+      "title": "Bonificación ICIO por obras con instalaciones de energía solar",
+      "description": "Bonificación sobre la cuota del ICIO para obras de instalación o adaptación de sistemas de aprovechamiento de la energía solar térmica o fotovoltaica.",
+      "source_name": "Ordenanza Fiscal ICIO - Ayuntamiento de Madrid",
+      "source_url": "https://sede.madrid.es/",
+      "validity_status": "unknown",
+      "applies_to_project_types": ["residential", "smb"],
+      "applies_to_installation_types": ["new", "refurbishment", "extension"]
+    }
+  ]
+}
