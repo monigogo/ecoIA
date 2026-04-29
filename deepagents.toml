@@ -1,0 +1,18 @@
+[agent]
+name = "solarlife-supervisor"
+description = "Supervisor agent for solar planning tasks (ODS 7)"
+model = "openai:gpt-4o-mini"
+
+[memory]
+files = ["AGENTS.md"]
+
+[skills]
+paths = [
+    "skills/solar_planning/SKILL.md",
+    "skills/degradation_analysis/SKILL.md",
+    "skills/battery_sizing/SKILL.md",
+    "skills/subsidy_detection/SKILL.md",
+    "skills/rdtools_analysis/SKILL.md",
+    "skills/ods7_impact/SKILL.md",
+    "skills/report_generation/SKILL.md",
+]

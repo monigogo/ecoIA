@@ -1,0 +1,52 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "BDNS / SNPSAP - Sample subset",
+    "version": "sample-1.0",
+    "description": "Reduced fixture of the BDNS OpenAPI document used to exercise the swagger inspector script and to keep the project decoupled from network access in tests."
+  },
+  "servers": [
+    {
+      "url": "https://www.infosubvenciones.es/bdnstrans/api"
+    }
+  ],
+  "paths": {
+    "/convocatorias/busqueda": {
+      "get": {
+        "summary": "Búsqueda de convocatorias publicadas",
+        "parameters": [
+          {"name": "descripcion", "in": "query", "schema": {"type": "string"}},
+          {"name": "comunidadAutonoma", "in": "query", "schema": {"type": "string"}},
+          {"name": "provincia", "in": "query", "schema": {"type": "string"}},
+          {"name": "fechaDesde", "in": "query", "schema": {"type": "string", "format": "date"}},
+          {"name": "fechaHasta", "in": "query", "schema": {"type": "string", "format": "date"}}
+        ]
+      }
+    },
+    "/convocatorias/{idConvocatoria}": {
+      "get": {
+        "summary": "Detalle de una convocatoria"
+      }
+    },
+    "/concesiones/busqueda": {
+      "get": {
+        "summary": "Búsqueda de concesiones de subvenciones"
+      }
+    },
+    "/beneficiarios/busqueda": {
+      "get": {
+        "summary": "Búsqueda de beneficiarios"
+      }
+    },
+    "/ayudasdeestado/busqueda": {
+      "get": {
+        "summary": "Búsqueda de ayudas de estado"
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health probe"
+      }
+    }
+  }
+}

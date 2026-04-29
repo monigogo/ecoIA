@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "source_disclaimer": "Curated AEAT IRPF deduction reference. Validity, percentages, and conditions must be verified on the official AEAT site before use.",
+  "deductions": [
+    {
+      "id": "irpf_demand_reduction",
+      "title": "Deducción por obras de reducción de demanda de calefacción y refrigeración",
+      "tax_type": "irpf_energy_efficiency_demand",
+      "source_name": "AEAT",
+      "source_url": "https://sede.agenciatributaria.gob.es/Sede/vivienda-otros-inmuebles/deducciones-obras-mejora-eficiencia-energetica-viviendas.html",
+      "eligibility_summary": "Deducción IRPF por obras que reduzcan al menos un porcentaje mínimo de la demanda de calefacción y refrigeración de la vivienda habitual o arrendada.",
+      "required_evidence": [
+        "Certificado de eficiencia energética anterior y posterior a la obra",
+        "Facturas de las obras",
+        "Justificación del medio de pago"
+      ],
+      "validity_period_start": "2021-10-06",
+      "validity_period_end": "2026-12-31",
+      "max_base_or_percentage": "Hasta el 20% de la base máxima fijada por la normativa anual.",
+      "applies_to_property_types": ["primary_residence", "rental"],
+      "applies_to_work_types": ["energy_rehabilitation", "thermal_renewable"]
+    },
+    {
+      "id": "irpf_consumption_reduction",
+      "title": "Deducción por obras de mejora del consumo de energía primaria no renovable",
+      "tax_type": "irpf_energy_efficiency_consumption",
+      "source_name": "AEAT",
+      "source_url": "https://sede.agenciatributaria.gob.es/Sede/vivienda-otros-inmuebles/deducciones-obras-mejora-eficiencia-energetica-viviendas.html",
+      "eligibility_summary": "Deducción IRPF por obras que reduzcan el consumo de energía primaria no renovable en la vivienda habitual o arrendada.",
+      "required_evidence": [
+        "Certificado de eficiencia energética anterior y posterior",
+        "Facturas y justificantes de pago"
+      ],
+      "validity_period_start": "2021-10-06",
+      "validity_period_end": "2026-12-31",
+      "max_base_or_percentage": "Hasta el 40% de la base máxima fijada por la normativa anual.",
+      "applies_to_property_types": ["primary_residence", "rental"],
+      "applies_to_work_types": ["energy_rehabilitation"]
+    },
+    {
+      "id": "irpf_residential_rehabilitation",
+      "title": "Deducción por obras de rehabilitación energética en edificios residenciales",
+      "tax_type": "irpf_residential_rehabilitation",
+      "source_name": "AEAT",
+      "source_url": "https://sede.agenciatributaria.gob.es/Sede/vivienda-otros-inmuebles/deducciones-obras-mejora-eficiencia-energetica-viviendas.html",
+      "eligibility_summary": "Deducción IRPF por obras de rehabilitación energética en edificios de uso predominantemente residencial.",
+      "required_evidence": [
+        "Certificado energético del edificio anterior y posterior",
+        "Acuerdo o resolución de la junta de propietarios cuando aplique",
+        "Facturas y justificantes de pago"
+      ],
+      "validity_period_start": "2021-10-06",
+      "validity_period_end": "2027-12-31",
+      "max_base_or_percentage": "Hasta el 60% de la base máxima fijada por la normativa anual.",
+      "applies_to_property_types": ["primary_residence", "secondary_residence", "rental"],
+      "applies_to_work_types": ["energy_rehabilitation"]
+    },
+    {
+      "id": "irpf_self_consumption_2026",
+      "title": "Deducción por instalación durante 2026 de sistemas de autoconsumo eléctrico con renovables",
+      "tax_type": "irpf_self_consumption_2026",
+      "source_name": "AEAT",
+      "source_url": "https://sede.agenciatributaria.gob.es/Sede/todas-noticias/2026/marzo/23/medidas-materia-tributacion.html",
+      "eligibility_summary": "Nueva deducción IRPF por la instalación durante 2026 de sistemas de autoconsumo eléctrico de fuentes renovables conforme al Real Decreto-ley 7/2026.",
+      "required_evidence": [
+        "Factura y justificante de pago de la instalación",
+        "Certificado de instalación eléctrica de baja tensión (CIE) o equivalente",
+        "Documentación que acredite el origen renovable y la condición de autoconsumo"
+      ],
+      "validity_period_start": "2026-01-01",
+      "validity_period_end": "2026-12-31",
+      "max_base_or_percentage": "Porcentaje y base máxima fijados por el Real Decreto-ley 7/2026; pendiente de validación detallada.",
+      "applies_to_property_types": ["primary_residence", "secondary_residence", "rental"],
+      "applies_to_work_types": ["self_consumption_pv", "battery_storage"]
+    }
+  ]
+}

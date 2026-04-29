@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1.0",
+  "description": "Registry of citable technical and regulatory reference sources usable by the AssumptionProvider. NOT a defaults table. Each entry only points to where authoritative information can be cited from. Concrete numeric values are reasoned by the LLM and must be cited against one of these sources or be marked as a generic technical_reference candidate with disclosure.",
+  "sources": [
+    {
+      "source_id": "pvgis_v5_3",
+      "title": "PVGIS v5.3 — Photovoltaic Geographical Information System",
+      "organization": "Joint Research Centre, European Commission",
+      "url": "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+      "source_type": "external_api",
+      "last_checked": "2026-04-28",
+      "notes": "Authoritative source for solar irradiance, PV production estimates, and meteorological time series in Europe."
+    },
+    {
+      "source_id": "nrel_pv_degradation",
+      "title": "NREL Photovoltaic Module Degradation Studies",
+      "organization": "National Renewable Energy Laboratory (US DOE)",
+      "url": "https://www.nrel.gov/pv/module-reliability-research.html",
+      "source_type": "technical_reference",
+      "last_checked": "2026-04-28",
+      "notes": "Peer-reviewed reference for PV degradation rate ranges across module technologies and climates."
+    },
+    {
+      "source_id": "idae_autoconsumo",
+      "title": "IDAE — Guías técnicas y regulatorias de autoconsumo fotovoltaico",
+      "organization": "Instituto para la Diversificación y Ahorro de la Energía (Spain)",
+      "url": "https://www.idae.es/tecnologias/energias-renovables/uso-electrico/solar-fotovoltaica",
+      "source_type": "technical_reference",
+      "last_checked": "2026-04-28",
+      "notes": "Spanish regulatory and technical guidance for residential and commercial PV self-consumption."
+    },
+    {
+      "source_id": "bdns_snpsap",
+      "title": "BDNS / SNPSAP — Base de Datos Nacional de Subvenciones",
+      "organization": "Ministerio de Hacienda (Spain)",
+      "url": "https://www.infosubvenciones.es/",
+      "source_type": "external_api",
+      "last_checked": "2026-04-28",
+      "notes": "Official registry of public grants and subsidies in Spain. Queryable by sector and territory."
+    },
+    {
+      "source_id": "iea_pvps_t13",
+      "title": "IEA PVPS Task 13 — Performance, Operation and Reliability of PV Systems",
+      "organization": "International Energy Agency PVPS",
+      "url": "https://iea-pvps.org/research-tasks/performance-operation-and-reliability-of-photovoltaic-systems/",
+      "source_type": "technical_reference",
+      "last_checked": "2026-04-28",
+      "notes": "International technical references on PV system losses, soiling, availability and degradation."
+    },
+    {
+      "source_id": "ieee_battery_storage_guidelines",
+      "title": "IEEE 1547 / IEC 62933 — Stationary battery energy storage standards",
+      "organization": "IEEE / IEC",
+      "url": "https://standards.ieee.org/",
+      "source_type": "technical_reference",
+      "last_checked": "2026-04-28",
+      "notes": "Standards covering depth-of-discharge, round-trip efficiency, lifetime cycling for stationary batteries. Use in lieu of manufacturer datasheets when none is provided."
+    }
+  ]
+}
